@@ -1,0 +1,204 @@
+login as: root
+root@192.168.0.117's password:
+Last login: Sat Nov 12 03:43:39 2016 from 192.168.0.16
+[root@ulhas-sys-client1 ~]# vi /etc/auto.australia
+[root@ulhas-sys-client1 ~]# service autofs restart
+Stopping automount:                                        [  OK  ]
+Starting automount:                                        [  OK  ]
+[root@ulhas-sys-client1 ~]# vi /etc/auto.australia
+[root@ulhas-sys-client1 ~]# service autofs restart
+Stopping automount:                                        [  OK  ]
+Starting automount:                                        [  OK  ]
+[root@ulhas-sys-client1 ~]# vi /etc/auto.users1
+[root@ulhas-sys-client1 ~]# vi /etc/auto.australia
+[root@ulhas-sys-client1 ~]# vi /etc/auto.users1
+[root@ulhas-sys-client1 ~]# rm -rf /etc/auto.australia
+[root@ulhas-sys-client1 ~]# rm -rf /etc/auto.master
+[root@ulhas-sys-client1 ~]# vi  /etc/auto.master
+[root@ulhas-sys-client1 ~]# service autofs restart
+Stopping automount:                                        [  OK  ]
+Starting automount:                                        [FAILED]
+[root@ulhas-sys-client1 ~]# vi  /etc/auto.master
+[root@ulhas-sys-client1 ~]# service autofs restart
+Starting automount:                                        [  OK  ]
+[root@ulhas-sys-client1 ~]# groupadd -g 4000 westindies
+You have mail in /var/spool/mail/root
+[root@ulhas-sys-client1 ~]# umount -a
+umount.nfs: /users/smith: device is busy
+umount: /dev/shm: device is busy.
+        (In some cases useful info about processes that use
+         the device is found by lsof(8) or fuser(1))
+umount: /: device is busy.
+        (In some cases useful info about processes that use
+         the device is found by lsof(8) or fuser(1))
+[root@ulhas-sys-client1 ~]# groupadd -g 4000 westindies
+groupadd: group 'westindies' already exists
+[root@ulhas-sys-client1 ~]# useradd -u 4001 -g 4000 -M -d /users/gayle gayle
+[root@ulhas-sys-client1 ~]# useradd -u 4002 -g 4000 -M -d /users/bravo bravo
+[root@ulhas-sys-client1 ~]# useradd -u 4003 -g 4000 -M -d /users/sammy sammy
+[root@ulhas-sys-client1 ~]# useradd -u 4004 -g 4000 -M -d /users/samuels samuels
+[root@ulhas-sys-client1 ~]# useradd -u 4005 -g 4000 -M -d /users/holder holder
+[root@ulhas-sys-client1 ~]# vi /etc/auto.users1
+[root@ulhas-sys-client1 ~]# service autofs restart
+Stopping automount:                                        [  OK  ]
+Starting automount:                                        [  OK  ]
+[root@ulhas-sys-client1 ~]# passwd gayle
+Changing password for user gayle.
+New password:
+BAD PASSWORD: it is based on your username
+Retype new password:
+passwd: all authentication tokens updated successfully.
+[root@ulhas-sys-client1 ~]# passwd bravo
+Changing password for user bravo.
+New password:
+BAD PASSWORD: it is based on your username
+Retype new password:
+passwd: all authentication tokens updated successfully.
+[root@ulhas-sys-client1 ~]# passwd sammy
+Changing password for user sammy.
+New password:
+BAD PASSWORD: it is based on your username
+Retype new password:
+passwd: all authentication tokens updated successfully.
+[root@ulhas-sys-client1 ~]# groupadd -g 5000 bangladesh
+[root@ulhas-sys-client1 ~]# useradd -u 5001 -M -d /users/rahim rahim
+[root@ulhas-sys-client1 ~]# passwd rahim
+Changing password for user rahim.
+New password:
+BAD PASSWORD: it is based on your username
+Retype new password:
+passwd: all authentication tokens updated successfully.
+[root@ulhas-sys-client1 ~]# useradd -u 5002 -M -d /users/mortaza mortaza
+[root@ulhas-sys-client1 ~]# usermod -u 5001 -g 5000
+usermod: user '5000' does not exist
+[root@ulhas-sys-client1 ~]# usermod -u 5001 bangladesh
+usermod: user 'bangladesh' does not exist
+[root@ulhas-sys-client1 ~]# usermod -u 5001 -g bangladesh
+usermod: user 'bangladesh' does not exist
+[root@ulhas-sys-client1 ~]# usermod -g bangladesh rahim
+[root@ulhas-sys-client1 ~]# usermod -g bangladesh mortaza
+[root@ulhas-sys-client1 ~]# useradd -u 5002 -g 5000 -M -d /users/iqbal iqbal
+useradd: UID 5002 is not unique
+[root@ulhas-sys-client1 ~]# useradd -u 5003 -g 5000 -M -d /users/iqbal iqbal
+[root@ulhas-sys-client1 ~]# useradd -u 5004 -g 5000 -M -d /users/hasan hasan
+[root@ulhas-sys-client1 ~]# passwd iqbal
+Changing password for user iqbal.
+New password:
+BAD PASSWORD: it is based on your username
+Retype new password:
+passwd: all authentication tokens updated successfully.
+[root@ulhas-sys-client1 ~]# passwd hasan
+Changing password for user hasan.
+New password:
+BAD PASSWORD: it is based on your username
+Retype new password:
+passwd: all authentication tokens updated successfully.
+[root@ulhas-sys-client1 ~]# vi /etc/auto.users1
+[root@ulhas-sys-client1 ~]# service autofs reload
+Reloading maps
+[root@ulhas-sys-client1 ~]#
+Using username "root".
+root@192.168.0.117's password:
+Last login: Sat Nov 12 04:03:58 2016 from 192.168.0.16
+[root@ulhas-sys-client1 ~]# cat /etc/passwd
+root:x:0:0:root:/root:/bin/bash
+bin:x:1:1:bin:/bin:/sbin/nologin
+daemon:x:2:2:daemon:/sbin:/sbin/nologin
+adm:x:3:4:adm:/var/adm:/sbin/nologin
+lp:x:4:7:lp:/var/spool/lpd:/sbin/nologin
+sync:x:5:0:sync:/sbin:/bin/sync
+shutdown:x:6:0:shutdown:/sbin:/sbin/shutdown
+halt:x:7:0:halt:/sbin:/sbin/halt
+mail:x:8:12:mail:/var/spool/mail:/sbin/nologin
+uucp:x:10:14:uucp:/var/spool/uucp:/sbin/nologin
+operator:x:11:0:operator:/root:/sbin/nologin
+games:x:12:100:games:/usr/games:/sbin/nologin
+gopher:x:13:30:gopher:/var/gopher:/sbin/nologin
+ftp:x:14:50:FTP User:/var/ftp:/sbin/nologin
+nobody:x:99:99:Nobody:/:/sbin/nologin
+dbus:x:81:81:System message bus:/:/sbin/nologin
+usbmuxd:x:113:113:usbmuxd user:/:/sbin/nologin
+vcsa:x:69:69:virtual console memory owner:/dev:/sbin/nologin
+rpc:x:32:32:Rpcbind Daemon:/var/cache/rpcbind:/sbin/nologin
+rtkit:x:499:496:RealtimeKit:/proc:/sbin/nologin
+avahi-autoipd:x:170:170:Avahi IPv4LL Stack:/var/lib/avahi-autoipd:/sbin/nologin
+pulse:x:498:495:PulseAudio System Daemon:/var/run/pulse:/sbin/nologin
+haldaemon:x:68:68:HAL daemon:/:/sbin/nologin
+ntp:x:38:38::/etc/ntp:/sbin/nologin
+apache:x:48:48:Apache:/var/www:/sbin/nologin
+saslauth:x:497:76:"Saslauthd user":/var/empty/saslauth:/sbin/nologin
+postfix:x:89:89::/var/spool/postfix:/sbin/nologin
+mysql:x:27:27:MySQL Server:/var/lib/mysql:/bin/bash
+abrt:x:173:173::/etc/abrt:/sbin/nologin
+gdm:x:42:42::/var/lib/gdm:/sbin/nologin
+rpcuser:x:29:29:RPC Service User:/var/lib/nfs:/sbin/nologin
+nfsnobody:x:65534:65534:Anonymous NFS User:/var/lib/nfs:/sbin/nologin
+sshd:x:74:74:Privilege-separated SSH:/var/empty/sshd:/sbin/nologin
+tcpdump:x:72:72::/:/sbin/nologin
+oprofile:x:16:16:Special user account to be used by OProfile:/home/oprofile:/sbin/nologin
+ulhas:x:500:500:Ulhas:/home/ulhas:/bin/bash
+sachin:x:2001:2000::/users/sachin:/bin/bash
+shewag:x:2002:2000::/users/shewag:/bin/bash
+kohli:x:2003:2000::/users/kohli:/bin/bash
+sharma:x:2004:2000::/users/sharma:/bin/bash
+dravid:x:2005:2000::/users/dravid:/bin/bash
+smith:x:3001:3000::/users/smith:/bin/bash
+clarke:x:3002:3000::/users/clarke:/bin/bash
+warner:x:3003:3000::/users/warner:/bin/bash
+watson:x:3004:3000::/users/watson:/bin/bash
+maxwell:x:3005:3000::/users/maxwell:/bin/bash
+gayle:x:4001:4000::/users/gayle:/bin/bash
+bravo:x:4002:4000::/users/bravo:/bin/bash
+sammy:x:4003:4000::/users/sammy:/bin/bash
+samuels:x:4004:4000::/users/samuels:/bin/bash
+holder:x:4005:4000::/users/holder:/bin/bash
+rahim:x:5001:5000::/users/rahim:/bin/bash
+mortaza:x:5002:5000::/users/mortaza:/bin/bash
+iqbal:x:5003:5000::/users/iqbal:/bin/bash
+hasan:x:5004:5000::/users/hasan:/bin/bash
+[root@ulhas-sys-client1 ~]# cat /etc/auto.master
+#sample auto.master file
+# This is an automounter map and it has the following format
+# key [ -mount-options-separated-by-comma ] location
+# For details of the format look at autofs(5).
+#
+/misc   /etc/auto.misc
+#
+# NOTE: mounts done from a hosts map will be mounted with the
+#       "nosuid" and "nodev" options unless the "suid" and "dev"
+#       options are explicitly given.
+#
+/net    -hosts
+#
+# Include central master map if it can be found using
+# nsswitch sources.
+#
+# Note that if there are entries for /net or /misc (as
+# above) in the included master map any keys that are the
+# same will not be seen as the first read key seen takes
+# precedence.
+#
++auto.master
+/users  /etc/auto.users1        --timeout=60
+[root@ulhas-sys-client1 ~]# cat /etc/auto.users1
+sachin  -rw,soft,intr   ulhas-sys-server:/users/sachin
+kohli   -rw,soft,intr   ulhas-sys-server:/users/kohli
+dravid  -rw,soft,intr   ulhas-sys-server:/users/dravid
+shewag  -rw,soft,intr   ulhas-sys-server:/users/shewag
+sharma  -rw,soft,intr   ulhas-sys-server:/users/sharma
+smith   -rw,soft,intr   ulhas-sys-server:/users/clarke
+clarke   -rw,soft,intr   ulhas-sys-server:/users/smith
+warner   -rw,soft,intr   ulhas-sys-server:/users/warner
+watson  -rw,soft,intr   ulhas-sys-server:/users/watson
+maxwell -rw,soft,intr   ulhas-sys-server:/users/maxwell
+gayle   -rw,soft,intr   ulhas-sys-server:/users/gayle
+bravo   -rw,soft,intr   ulhas-sys-server:/users/bravo
+sammy   -rw,soft,intr   ulhas-sys-server:/users/sammy
+samuels -rw,soft,intr   ulhas-sys-server:/users/samuels
+holder  -rw,soft,intr   ulhas-sys-server:/users/holder
+
+rahim   -rw,soft,intr   ulhas-sys-server:/users/rahim
+mortaza -rw,soft,intr   ulhas-sys-server:/users/mortaza
+iqbal   -rw,soft,intr   ulhas-sys-server:/users/iqbal
+hasan   -rw,soft,intr   ulhas-sys-server:/users/hasan
+[root@ulhas-sys-client1 ~]#

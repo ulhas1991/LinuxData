@@ -1,0 +1,208 @@
+login as: root
+root@192.168.0.116's password:
+Last login: Fri Nov 11 14:52:18 2016 from 192.168.0.16
+[root@ulhas-sys-server ~]# groupadd -g 3000 australia
+[root@ulhas-sys-server ~]# useradd -u 3001 -g 3000 -d /users/smith smith
+[root@ulhas-sys-server ~]# useradd -u 3002 -g 3000 -d /users/clarke clarke
+[root@ulhas-sys-server ~]# useradd -u 3003 -g 3000 -d /users/warner warner
+[root@ulhas-sys-server ~]#  useradd -u 3004 -g 3000 -d /users/watson watson
+[root@ulhas-sys-server ~]#  useradd -u 3005 -g 3000 -d /users/maxwell maxwell
+[root@ulhas-sys-server ~]# passwd smith
+Changing password for user smith.
+New password:
+BAD PASSWORD: it is based on your username
+Retype new password:
+passwd: all authentication tokens updated successfully.
+[root@ulhas-sys-server ~]# passwd warner
+Changing password for user warner.
+New password:
+BAD PASSWORD: it is based on your username
+Retype new password:
+passwd: all authentication tokens updated successfully.
+[root@ulhas-sys-server ~]# passwd clarke
+Changing password for user clarke.
+New password:
+BAD PASSWORD: it is based on your username
+Retype new password:
+passwd: all authentication tokens updated successfully.
+[root@ulhas-sys-server ~]# passwd maxwell
+Changing password for user maxwell.
+New password:
+BAD PASSWORD: it is based on your username
+Retype new password:
+passwd: all authentication tokens updated successfully.
+[root@ulhas-sys-server ~]# passwd watson
+Changing password for user watson.
+New password:
+BAD PASSWORD: it is based on your username
+Retype new password:
+passwd: all authentication tokens updated successfully.
+[root@ulhas-sys-server ~]# vi /etc/auto.master
+[root@ulhas-sys-server ~]# groupadd -g 4000 westindies
+[root@ulhas-sys-server ~]# useradd -u 4001 gayle -g 4000 -d /users/gayle gayle
+Usage: useradd [options] LOGIN
+
+Options:
+  -b, --base-dir BASE_DIR       base directory for the home directory of the
+                                new account
+  -c, --comment COMMENT         GECOS field of the new account
+  -d, --home-dir HOME_DIR       home directory of the new account
+  -D, --defaults                print or change default useradd configuration
+  -e, --expiredate EXPIRE_DATE  expiration date of the new account
+  -f, --inactive INACTIVE       password inactivity period of the new account
+  -g, --gid GROUP               name or ID of the primary group of the new
+                                account
+  -G, --groups GROUPS           list of supplementary groups of the new
+                                account
+  -h, --help                    display this help message and exit
+  -k, --skel SKEL_DIR           use this alternative skeleton directory
+  -K, --key KEY=VALUE           override /etc/login.defs defaults
+  -l, --no-log-init             do not add the user to the lastlog and
+                                faillog databases
+  -m, --create-home             create the user's home directory
+  -M, --no-create-home          do not create the user's home directory
+  -N, --no-user-group           do not create a group with the same name as
+                                the user
+  -o, --non-unique              allow to create users with duplicate
+                                (non-unique) UID
+  -p, --password PASSWORD       encrypted password of the new account
+  -r, --system                  create a system account
+  -s, --shell SHELL             login shell of the new account
+  -u, --uid UID                 user ID of the new account
+  -U, --user-group              create a group with the same name as the user
+  -Z, --selinux-user SEUSER     use a specific SEUSER for the SELinux user mapping
+
+[root@ulhas-sys-server ~]# useradd -u 4001 -g 4000 -d /users/gayle gayle
+[root@ulhas-sys-server ~]# useradd -u 4002 -g 4000 -d /users/bravo bravo
+[root@ulhas-sys-server ~]# useradd -u 4003 -g 4000 -d /users/sammy sammy
+[root@ulhas-sys-server ~]# useradd -u 4004 -g 4000 -d /users/samuels samuels
+[root@ulhas-sys-server ~]# useradd -u 4005 -g 4000 -d /users/holder holder
+[root@ulhas-sys-server ~]# cat /etc/shadow
+root:$6$3Tw0DVb4yF.yGOTg$VeP.oeMnnDBc8lIR/BxD/5OOIo4.80RR6L43H98hcacQxF8lvJnTFTlvKMf3v4ETJ3GR/BYFE62IWl9VSYoH3.:17108:0:99999:7:::
+bin:*:15615:0:99999:7:::
+daemon:*:15615:0:99999:7:::
+adm:*:15615:0:99999:7:::
+lp:*:15615:0:99999:7:::
+sync:*:15615:0:99999:7:::
+shutdown:*:15615:0:99999:7:::
+halt:*:15615:0:99999:7:::
+mail:*:15615:0:99999:7:::
+uucp:*:15615:0:99999:7:::
+operator:*:15615:0:99999:7:::
+games:*:15615:0:99999:7:::
+gopher:*:15615:0:99999:7:::
+ftp:*:15615:0:99999:7:::
+nobody:*:15615:0:99999:7:::
+dbus:!!:17108::::::
+usbmuxd:!!:17108::::::
+vcsa:!!:17108::::::
+rpc:!!:17108:0:99999:7:::
+rtkit:!!:17108::::::
+avahi-autoipd:!!:17108::::::
+pulse:!!:17108::::::
+haldaemon:!!:17108::::::
+ntp:!!:17108::::::
+apache:!!:17108::::::
+saslauth:!!:17108::::::
+postfix:!!:17108::::::
+mysql:!!:17108::::::
+abrt:!!:17108::::::
+gdm:!!:17108::::::
+rpcuser:!!:17108::::::
+nfsnobody:!!:17108::::::
+sshd:!!:17108::::::
+tcpdump:!!:17108::::::
+oprofile:!!:17108::::::
+ulhas:$6$9A.E5SLRoo1futyF$XlEnr3JMAWqeaOlxRHkijRaWTiR/9K5OhPAKuZJ4YuZe82vzUmoSJztBB5HeDH3q2Ejjm601e4pxVIgs6OyGU/:17108:0:99999:7:::
+sachin:$6$e1YWjmun$rRbAcfli3RWdUvHf//yZShcygbnBSutCI3OAFQ0zYIocOkvjFBOYtm5KUc9na3sG3nGCBZjwLHy1PLosgNABS1:17116:0:99999:7:::
+shewag:!!:17116:0:99999:7:::
+kohli:!!:17116:0:99999:7:::
+sharma:!!:17116:0:99999:7:::
+dravid:!!:17116:0:99999:7:::
+smith:$6$6IEVNY7e$iN/5kSTiR1zvlE.cZzpT6HLpExpUPhEbLF7kcXXemhOvng1CWY/qfp36XQlYIzdqHILjR.nCLup9MDr0EIiQt1:17117:0:99999:7:::
+clarke:$6$MJsZSduo$zNHRPBFKHqr0np5m7C39/nR/AqzBCtAPsWxLs/VGwQ3Ch8eLBTT2Zq7nlsw7i74L1sPB09g.Lfax16EM34P8U0:17117:0:99999:7:::
+warner:$6$Wk86gKgG$puXuairiJh9XIrC2DU3IbEwNOOnB9ZZPm8YNEXpOGrDQgdjdrJYTIFkbY3zrIhcw..BpBqucmVPfjrsXfq912.:17117:0:99999:7:::
+watson:$6$PkWrOH8r$fVX.DMAPufLTnuR3w8kd1bLXFuj0kujgx32W3IvdsTCzDPs9JT2g/EIu2BisjN0iSbtZ96Gw/Ox7.DHhdKF78/:17117:0:99999:7:::
+maxwell:$6$LE/Ad0WM$/v8cfygzb8SB8y06TsHxI9FQi6hKaYcTvjwBsgNt9ygMwt/0CPlc2ewFsBA3DgWwCN6HB2xe7W/0J7Vl00sff0:17117:0:99999:7:::
+gayle:!!:17117:0:99999:7:::
+bravo:!!:17117:0:99999:7:::
+sammy:!!:17117:0:99999:7:::
+samuels:!!:17117:0:99999:7:::
+holder:!!:17117:0:99999:7:::
+[root@ulhas-sys-server ~]# cat /etc/passwd
+root:x:0:0:root:/root:/bin/bash
+bin:x:1:1:bin:/bin:/sbin/nologin
+daemon:x:2:2:daemon:/sbin:/sbin/nologin
+adm:x:3:4:adm:/var/adm:/sbin/nologin
+lp:x:4:7:lp:/var/spool/lpd:/sbin/nologin
+sync:x:5:0:sync:/sbin:/bin/sync
+shutdown:x:6:0:shutdown:/sbin:/sbin/shutdown
+halt:x:7:0:halt:/sbin:/sbin/halt
+mail:x:8:12:mail:/var/spool/mail:/sbin/nologin
+uucp:x:10:14:uucp:/var/spool/uucp:/sbin/nologin
+operator:x:11:0:operator:/root:/sbin/nologin
+games:x:12:100:games:/usr/games:/sbin/nologin
+gopher:x:13:30:gopher:/var/gopher:/sbin/nologin
+ftp:x:14:50:FTP User:/var/ftp:/sbin/nologin
+nobody:x:99:99:Nobody:/:/sbin/nologin
+dbus:x:81:81:System message bus:/:/sbin/nologin
+usbmuxd:x:113:113:usbmuxd user:/:/sbin/nologin
+vcsa:x:69:69:virtual console memory owner:/dev:/sbin/nologin
+rpc:x:32:32:Rpcbind Daemon:/var/cache/rpcbind:/sbin/nologin
+rtkit:x:499:496:RealtimeKit:/proc:/sbin/nologin
+avahi-autoipd:x:170:170:Avahi IPv4LL Stack:/var/lib/avahi-autoipd:/sbin/nologin
+pulse:x:498:495:PulseAudio System Daemon:/var/run/pulse:/sbin/nologin
+haldaemon:x:68:68:HAL daemon:/:/sbin/nologin
+ntp:x:38:38::/etc/ntp:/sbin/nologin
+apache:x:48:48:Apache:/var/www:/sbin/nologin
+saslauth:x:497:76:"Saslauthd user":/var/empty/saslauth:/sbin/nologin
+postfix:x:89:89::/var/spool/postfix:/sbin/nologin
+mysql:x:27:27:MySQL Server:/var/lib/mysql:/bin/bash
+abrt:x:173:173::/etc/abrt:/sbin/nologin
+gdm:x:42:42::/var/lib/gdm:/sbin/nologin
+rpcuser:x:29:29:RPC Service User:/var/lib/nfs:/sbin/nologin
+nfsnobody:x:65534:65534:Anonymous NFS User:/var/lib/nfs:/sbin/nologin
+sshd:x:74:74:Privilege-separated SSH:/var/empty/sshd:/sbin/nologin
+tcpdump:x:72:72::/:/sbin/nologin
+oprofile:x:16:16:Special user account to be used by OProfile:/home/oprofile:/sbin/nologin
+ulhas:x:500:500:Ulhas:/home/ulhas:/bin/bash
+sachin:x:2001:2000::/users/sachin:/bin/bash
+shewag:x:2002:2000::/users/shewag:/bin/bash
+kohli:x:2003:2000::/users/kohli:/bin/bash
+sharma:x:2004:2000::/users/sharma:/bin/bash
+dravid:x:2005:2000::/users/dravid:/bin/bash
+smith:x:3001:3000::/users/smith:/bin/bash
+clarke:x:3002:3000::/users/clarke:/bin/bash
+warner:x:3003:3000::/users/warner:/bin/bash
+watson:x:3004:3000::/users/watson:/bin/bash
+maxwell:x:3005:3000::/users/maxwell:/bin/bash
+gayle:x:4001:4000::/users/gayle:/bin/bash
+bravo:x:4002:4000::/users/bravo:/bin/bash
+sammy:x:4003:4000::/users/sammy:/bin/bash
+samuels:x:4004:4000::/users/samuels:/bin/bash
+holder:x:4005:4000::/users/holder:/bin/bash
+[root@ulhas-sys-server ~]# groupadd -g 5000 bangladesh
+[root@ulhas-sys-server ~]# useradd -u 5001 -g 5000 -d /users/rahim rahim
+[root@ulhas-sys-server ~]# useradd -u 5002 -g 5000 -d /users/mortaza mortaza
+[root@ulhas-sys-server ~]# useradd -u 5003 -g 5000 -d /users/iqbal iqbal
+[root@ulhas-sys-server ~]# useradd -u 5004 -g 5000 -d /users/hasan hasan
+[root@ulhas-sys-server ~]# useradd -u 5005 -g 5000 -d /users/kayes kayes
+[root@ulhas-sys-server ~]# passwd rahim
+Changing password for user rahim.
+New password:
+BAD PASSWORD: it is based on your username
+Retype new password:
+passwd: all authentication tokens updated successfully.
+[root@ulhas-sys-server ~]# passwd mortaza
+Changing password for user mortaza.
+New password:
+BAD PASSWORD: it is based on your username
+Retype new password:
+passwd: all authentication tokens updated successfully.
+[root@ulhas-sys-server ~]# passwd iqbal
+Changing password for user iqbal.
+New password:
+BAD PASSWORD: it is based on your username
+Retype new password:
+passwd: all authentication tokens updated successfully.
+[root@ulhas-sys-server ~]#

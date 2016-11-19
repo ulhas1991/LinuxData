@@ -1,0 +1,154 @@
+login as: kohli
+kohli@192.168.0.118's password:
+[kohli@ulhas-sys-client2 ~]$ df -h
+Filesystem            Size  Used Avail Use% Mounted on
+/dev/mapper/VolGroup-lv_root
+                       16G  3.3G   12G  23% /
+tmpfs                 948M  224K  948M   1% /dev/shm
+/dev/sda1             485M   36M  424M   8% /boot
+df: `/root/.gvfs': Permission denied
+/dev/sr0              3.0G  3.0G     0 100% /media/RHEL_6.4 i386 Disc 1
+ulhas-sys-server:/users/sachin
+                      9.9G  152M  9.2G   2% /users/sachin
+ulhas-sys-server:/users/kohli
+                      9.9G  152M  9.2G   2% /users/kohli
+[kohli@ulhas-sys-client2 ~]$ su
+Password:
+^C
+[kohli@ulhas-sys-client2 ~]$ su root
+Password:
+[root@ulhas-sys-client2 kohli]# cd /
+[root@ulhas-sys-client2 /]# useradd -u 2005 -g 2000 -M -d /users/dravid dravid
+[root@ulhas-sys-client2 /]# groupadd australia
+[root@ulhas-sys-client2 /]# groupmod -g 3000 australia
+[root@ulhas-sys-client2 /]# id australia
+id: australia: No such user
+[root@ulhas-sys-client2 /]# useradd -u 3001 -g 3000 -M -d /users/smith smith
+[root@ulhas-sys-client2 /]# passwd smith
+Changing password for user smith.
+New password:
+BAD PASSWORD: it is based on your username
+Retype new password:
+passwd: all authentication tokens updated successfully.
+[root@ulhas-sys-client2 /]# useradd -u 3002 -g 3000 -M -d /users/clarke clarke
+[root@ulhas-sys-client2 /]# useradd -u 3003 -g 3000 -M -d /users/warner warner
+^[[A^[[B[root@ulhas-sys-clie
+[root@ulhas-sys-client2 /]# useradd -u 3003 -g 3000 -M -d /users/warner warner
+useradd: user 'warner' already exists
+[root@ulhas-sys-client2 /]# useradd -u 3004 -g 3000 -M -d /users/maxwell maxwell
+[root@ulhas-sys-client2 /]# passwd clarke
+Changing password for user clarke.
+New password:
+BAD PASSWORD: it is based on your username
+Retype new password:
+passwd: all authentication tokens updated successfully.
+[root@ulhas-sys-client2 /]# passwd warner
+Changing password for user warner.
+New password:
+BAD PASSWORD: it is based on your username
+Retype new password:
+passwd: all authentication tokens updated successfully.
+[root@ulhas-sys-client2 /]# passwd maxwell
+Changing password for user maxwell.
+New password:
+BAD PASSWORD: it is based on your username
+Retype new password:
+passwd: all authentication tokens updated successfully.
+[root@ulhas-sys-client2 /]# groupadd -g 4000 westindies
+[root@ulhas-sys-client2 /]# useradd -u 4001 -g 4000 -M -d /users/gayle gayle
+[root@ulhas-sys-client2 /]# useradd -u 4002 -g 4000 -M -d /users/sammy sammy
+[root@ulhas-sys-client2 /]# useradd -u 4003 -g 4000 -M -d /users/samuels samuels
+[root@ulhas-sys-client2 /]# passwd sammy
+Changing password for user sammy.
+New password:
+BAD PASSWORD: it is based on your username
+Retype new password:
+passwd: all authentication tokens updated successfully.
+[root@ulhas-sys-client2 /]# passwd samuels
+Changing password for user samuels.
+New password:
+BAD PASSWORD: it is based on your username
+Retype new password:
+passwd: all authentication tokens updated successfully.
+[root@ulhas-sys-client2 /]# usermod -u 4004 samuels
+[root@ulhas-sys-client2 /]# usermod -u 4003 sammy
+usermod: user sammy is currently logged in
+[root@ulhas-sys-client2 /]# usermod -u 4003 sammy
+[root@ulhas-sys-client2 /]# useradd -u 4002 -g 4000 -M -d /users/bravo bravo
+[root@ulhas-sys-client2 /]# passwd bravo
+Changing password for user bravo.
+New password:
+BAD PASSWORD: it is based on your username
+Retype new password:
+passwd: all authentication tokens updated successfully.
+[root@ulhas-sys-client2 /]# groupadd -g 5000 bangladesh
+[root@ulhas-sys-client2 /]# useradd -u 5001 -g 5000 -M -d /users/rahim rahim
+[root@ulhas-sys-client2 /]# useradd -u 5002 -g 5000 -M -d /users/mortaza mortaza
+[root@ulhas-sys-client2 /]# useradd -u 5003 -g 5000 -M -d /users/iqbal iqbal
+[root@ulhas-sys-client2 /]# useradd -u 5004 -g 5000 -M -d /users/hasan hasan
+[root@ulhas-sys-client2 /]# useradd -u 5005 -g 5000 -M -d /users/kayes kayes
+[root@ulhas-sys-client2 /]# passwd raim
+passwd: Unknown user name 'raim'.
+[root@ulhas-sys-client2 /]# passwd rahim
+Changing password for user rahim.
+New password:
+BAD PASSWORD: it is based on your username
+Retype new password:
+passwd: all authentication tokens updated successfully.
+[root@ulhas-sys-client2 /]# passwd mortaza
+Changing password for user mortaza.
+New password:
+BAD PASSWORD: it is based on your username
+Retype new password:
+passwd: all authentication tokens updated successfully.
+[root@ulhas-sys-client2 /]# passwd iqbal
+Changing password for user iqbal.
+New password:
+BAD PASSWORD: it is based on your username
+Retype new password:
+passwd: all authentication tokens updated successfully.
+[root@ulhas-sys-client2 /]# passwd hasan
+Changing password for user hasan.
+New password:
+BAD PASSWORD: it is based on your username
+Retype new password:
+passwd: all authentication tokens updated successfully.
+[root@ulhas-sys-client2 /]# passwd kayes
+Changing password for user kayes.
+New password:
+BAD PASSWORD: it is based on your username
+Retype new password:
+passwd: all authentication tokens updated successfully.
+[root@ulhas-sys-client2 /]# cat /etc/hosts
+127.0.0.1   localhost localhost.localdomain localhost4 localhost4.localdomain4
+::1         localhost localhost.localdomain localhost6 localhost6.localdomain6
+192.168.0.116   ulhas-sys-server
+192.168.0.118   ulhas-sys-client2
+[root@ulhas-sys-client2 /]# cat /etc/auto.master
+#
+# Sample auto.master file
+# This is an automounter map and it has the following format
+# key [ -mount-options-separated-by-comma ] location
+# For details of the format look at autofs(5).
+#
+/misc   /etc/auto.misc
+#
+# NOTE: mounts done from a hosts map will be mounted with the
+#       "nosuid" and "nodev" options unless the "suid" and "dev"
+#       options are explicitly given.
+#
+/net    -hosts
+#
+# Include central master map if it can be found using
+# nsswitch sources.
+#
+# Note that if there are entries for /net or /misc (as
+# above) in the included master map any keys that are the
+# same will not be seen as the first read key seen takes
+# precedence.
+#
++auto.master
+/users  /etc/auto.user2 --timeout=20
+[root@ulhas-sys-client2 /]# cat /etc/auto.user2
+*       -rw,soft,intr   ulhas-sys-server:/users/&
+[root@ulhas-sys-client2 /]#

@@ -1,0 +1,22 @@
+vi /etc/exports
+
+/movies		*(rw,sync)
+
+exportfs -av
+/etc/init.d/nfs stop
+/etc/init.d/nfs start
+
+OFF FIREWALL
+/etc/init.d/iptables stop
+
+CLIENTSIDE
+showmount -e 192.168.1.1
+
+
+mkdir /tp
+mount -t nfs 192.168.1.1:/movies /tp
+
+ mount -t nfs 192.168.0.100:/nfsshare /mnt/nfsshare
+ vi /etc/fstab
+ 
+ 192.168.0.100:/nfsshare /mnt  nfs defaults 0 0
